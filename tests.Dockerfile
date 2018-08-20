@@ -12,7 +12,7 @@ RUN apt-get update -y && apt-get install -yq curl git bash-completion \
     curl -L https://raw.githubusercontent.com/alejandrox1/dev_env/master/local-setup/bash_prompt \
     -o /root/.bash_prompt
 
-ADD agave_mock_server/requirements.txt .
+ADD tests/agave_mock_server/requirements.txt .
 RUN pip install -r requirements.txt
 
 WORKDIR /agave-cli
