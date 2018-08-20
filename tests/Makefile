@@ -25,7 +25,7 @@ cli:
 	cp DISCLAIMER bin/docs/DISCLAIMER
 
 build: 
-	docker build $(DOCKER_BUILD_ARGS) -f "$(DOCKERFILE)" -t "$(DOCKER_IMAGE)" .
+	docker build $(DOCKER_BUILD_ARGS) -f "$(DOCKERFILE)" -t "$(DOCKER_IMAGE)" ..
 
 shell: build 
 	$(DOCKER_RUN_AGAVECLI) bash
